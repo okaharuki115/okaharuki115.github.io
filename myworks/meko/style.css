@@ -1,0 +1,448 @@
+@charset "utf-8";/*文字化け防止*/
+/* ========================================
+    リセットcss(デフォルトで読み込まれるCSSを無効にする)
+    （この記述はネット等で調べたら出てくる）
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================
+    リセットcss終了
+========================================= */
+body {
+	background-image: url("images/background_pattern.webp");
+	background-repeat: repeat;
+	background-size: auto;
+}
+header{
+	background-image: url(images/poundcake.jpg);
+	width: 80%;
+	height: 35rem;
+	background-size: cover;        /* 画像を要素全体にフィットさせる */
+  	background-position: center;   /* 画像の中央を表示 */
+  	background-repeat: no-repeat;  /* 画像を繰り返さない */
+	margin: 10px auto;
+}
+.header_logo{
+	display: flex;
+	justify-content: center;
+}
+.header_logo img{
+	width: 18rem;
+	height: 18rem;
+	margin-top: 8%;
+}
+.header_title{
+	display: flex;
+	justify-content: center;
+	font-size: 2.5rem;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	font-family: serif;
+	margin-top: 3rem;
+}
+.header_subtitle{
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+	color: #fff;
+	margin-top: 1rem;
+	letter-spacing: 1px;
+}
+.two_images{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 20rem;
+	margin: 0 auto;
+}
+.reservation{
+	background-image: url(images/berry.jpg);
+	width: 100%;
+	height: 100%;
+	background-size: cover;        /* 画像を要素全体にフィットさせる */
+  	background-position: center;   /* 画像の中央を表示 */
+  	background-repeat: no-repeat;  /* 画像を繰り返さない */
+	margin-right: 5px;
+	position: relative;
+}
+.shipping{
+	background-image: url(images/pound_slice.jpg);
+	width: 100%;
+	height: 100%;
+	background-size: cover;        /* 画像を要素全体にフィットさせる */
+  	background-position: center;   /* 画像の中央を表示 */
+  	background-repeat: no-repeat;  /* 画像を繰り返さない */
+	margin-left: 5px;
+	position: relative;
+}
+.twoimages_sentence{
+	display: flex;
+  	flex-direction: column;   /* 縦に並べる */
+  	align-items: center;      /* 横方向の中央寄せ */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.6);
+	width: 60%;
+	height: 60%;
+	padding: 3rem 5rem;
+}
+.twoimages_sentence span{
+	letter-spacing: 2px;
+	color: #fff;
+}
+.twoimages_sentence p{
+	font-size: 30px;
+	font-family: serif;
+	letter-spacing: 4px;
+	color: #331907;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	padding-top: 2rem;
+}
+.twoimages_sentence a{
+	font-size: 20px;
+	font-family: serif;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #331907;
+	text-decoration: none;
+	padding: 0.8rem 5rem;
+	border: 1.5px solid #331907;
+}
+/********こだわり*********/
+.kodawari{
+	background-image: url("images/background_pattern2.webp"); /* 保存先に応じて変更 */
+  	background-repeat: repeat;
+  	background-size: auto;
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* .kodawari_left{
+	width: 100%;
+}
+.kodawari_right{
+	width: 100%;
+} */
+.kodawari_left img{
+	width: 13rem;
+	height: 13rem;
+	margin-left: 10rem;
+}
+.kodawari_center img{
+	/* width: 13rem; */
+	height: 12rem;
+	padding-bottom: 3rem;
+}
+.kodawari_right p{
+	font-size: 14px;
+	color: #331907;
+	margin-right: 5rem;
+	margin-left: -5rem;
+	letter-spacing: 2px;
+	line-height: 2.5;
+}
+/*********アクセス************/
+.access_title{
+	position: relative;
+}
+.access h2{
+	text-align: center;
+	font-size: 40px;
+	color: #660e0e;
+	letter-spacing: 10px;
+	margin: 5rem 0;
+}
+.access_clear{
+	position: absolute;
+	bottom: -8rem;
+	right: 3rem;
+	font-size: 250px;
+	font-weight: bold;
+	color: #331907;
+	opacity: 10%;
+	font-family: serif;
+	z-index: 10;
+}
+.access_left{
+	z-index: 11;
+}
+.access_contain{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem 0;
+}
+.access_right{
+	margin-left: 5rem;
+}
+.access_right ul li{
+	font-size: 16px;
+	letter-spacing: 1px;
+	line-height: 4;
+	text-align: left;
+}
+/*******footer********/
+footer{
+	height: 250px;
+	background-color: #726250;
+}
+.footer_logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer_logo img{
+	margin-top: 2.5rem;
+	width: 180px;
+	height: 180px;
+}
+
+/**********************************************************
+              レスポンシブデザイン  ~768px
+*********************************************************/
+@media screen and (max-width: 768px) {
+  
+header{
+	width: 90%;
+	height: 30rem;
+}
+.header_logo img{
+	width: 16rem;
+	height: 16rem;
+	margin-top: 6%;
+}
+.header_title{
+	font-size: 1.5rem;
+	margin-top: 2.5rem;
+}
+.header_subtitle{
+	font-size: 0.8rem;
+}
+.two_images{
+	flex-direction: column;/*縦並び*/
+    align-items: center;/*左右中央に配置*/
+	width: 90%;
+	height: 50rem;
+}
+.reservation{
+	margin-right: 0px;
+}
+.shipping{
+	margin-left: 0px;
+}
+.twoimages_sentence{
+	width: 70%;
+	height: 60%;
+	padding: 2rem 3.5rem;
+}
+.twoimages_sentence p{
+	font-size: 26px;
+	letter-spacing: 3px;
+	padding-top: 1.5rem;
+}
+.twoimages_sentence a{
+	font-size: 18px;
+	padding: 0.6rem 4rem;
+}
+/********こだわり*********/
+.kodawari{
+	height: 600px;
+	/* display: flex;
+	justify-content: center; */
+	flex-direction: column;/*縦並び*/
+	align-items: center;
+}
+.kodawari_left img{
+	width: 10rem;
+	height: 10rem;
+	margin-left: 0;
+}
+.kodawari_center img{
+	padding-bottom: 0;
+}
+.kodawari_right p{
+	font-size: 12px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-top: -2rem;
+	letter-spacing: 2px;
+	line-height: 3;
+}
+/*********アクセス************/
+.access_title{
+	position: relative;
+}
+.access h2{
+	font-size: 38px;
+	letter-spacing: 8px;
+	margin: 4rem 0;
+}
+.access_clear{
+	position: absolute;
+	bottom: -7rem;
+	right: 1.5rem;
+	font-size: 180px;
+}
+.access_contain{
+	flex-direction: column;
+	align-items: center;
+	padding: 5rem 0;
+}
+.access_right{
+	margin-left: 0;
+}
+/*******footer********/
+footer{
+	height: 200px;
+}
+.footer_logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer_logo img{
+	margin-top: 2rem;
+	width: 150px;
+	height: 150px;
+}
+}
+
+/**********************************************************
+              レスポンシブデザイン  ~600px
+*********************************************************/
+@media screen and (max-width: 600px) {
+  header{
+	width: 95%;
+	height: 20rem;
+}
+.header_logo img{
+	width: 12rem;
+	height: 12rem;
+	margin-top: 4%;
+}
+.header_title{
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+.header_subtitle{
+	font-size: 0.6rem;
+}
+.two_images{
+	width: 95%;
+	height: 30rem;
+}
+/* .reservation{
+	margin-right: 0px;
+}
+.shipping{
+	margin-left: 0px;
+} */
+.twoimages_sentence{
+	width: 50%;
+	height: 70%;
+	padding: 1rem 2rem;
+}
+.twoimages_sentence p{
+	font-size: 20px;
+	letter-spacing: 1px;
+	padding-top: 1rem;
+}
+.twoimages_sentence span{
+	font-size: 10px;
+}
+.twoimages_sentence a{
+	font-size: 12px;
+	padding: 0.3rem 2rem;
+}
+/********こだわり*********/
+.kodawari{
+	height: 650px;
+}
+.kodawari_left img{
+	width: 9rem;
+	height: 9rem;
+}
+.kodawari_right{
+	padding-right: 2rem;
+	padding-left: 2rem;
+}
+
+/*********アクセス************/
+.access_title{
+	position: relative;
+}
+.access h2{
+	font-size: 36px;
+	letter-spacing: 6px;
+	/* margin: 4rem 0; */
+}
+.access_clear{
+	position: absolute;
+	bottom: -4rem;
+	right: 1.5rem;
+	font-size: 100px;
+}
+.access_contain{
+	padding: 3rem 0;
+}
+.access_right{
+	margin-left: 0;
+}
+.access_right ul li{
+	font-size: 14px;
+}
+.map-frame {
+	width: 100%;
+	height: 20rem;  
+	border: 0;         /* 枠線をなしに */
+}
+/*******footer********/
+.footer_logo img{
+	margin-top: 2rem;
+}
+}

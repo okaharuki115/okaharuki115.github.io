@@ -1,0 +1,351 @@
+@charset "utf-8";/*文字化け防止*/
+/* ========================================
+    リセットcss(デフォルトで読み込まれるCSSを無効にする)
+    （この記述はネット等で調べたら出てくる）
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================
+    リセットcss終了
+========================================= */
+/* ========================================
+    共通
+========================================= */
+/*google fontを入れる*/
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Sawarabi+Mincho&display=swap');
+
+.sub_title{
+	font-size: 28px;
+	font-family: serif;
+	letter-spacing: 4px;
+	text-align: center;
+	color: #331907;
+	padding-top: 80px;
+}
+body{
+	background-color: #e6e6e6;
+}
+/* ========================================
+    header
+========================================= */
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 7rem;
+	/* background: linear-gradient(to top, rgba(128, 14, 86, 0) 0%, #800e56 90%); */
+	position: relative;
+	z-index: 11;
+}
+.header_left img{
+	width: 150px;
+	height: 150px;
+	margin-top: -25px;
+}
+.header_right nav a{
+	color: #331907;
+	font-size: 14px;
+	font-family: serif;
+	font-weight: bold;
+	border-radius: 30px; /* 角を丸くする（値は調整可能） */
+    padding: 5px 25px; /* 内側の余白を追加してボタン風に */
+    text-decoration: none; /* 下線を消す */
+    display: inline-block; /* サイズ調整のため */
+	margin-left: 50px;
+	letter-spacing: 1px;
+	background-color: #fff;
+}
+/* ========================================
+    mainimage
+========================================= */
+.mainimage{
+	position: relative;
+}
+.mainimage_img{
+	/* position: absolute;
+	top: 0; */
+	margin-top: -7rem;
+	width: 100%;
+	height: 45rem;
+	filter: blur(2px); /* 5pxのぼかしを適用 */
+	object-fit: cover; /* 画像の比率を維持したまま調整 */
+	z-index: 10;
+}
+.mainimage_logo{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	height: 400px;
+	z-index: 11;
+}
+/* ========================================
+    こだわり
+========================================= */
+.kodawari{
+	margin-top: 12rem;
+	position: relative;
+	display: flex;
+	justify-content: right;
+	background-image: url(images/pink_background.jpg);
+	background-size: 15% 100%;
+}
+/* .kodawari_title_img{
+	width: 250px;
+	height: 150px;
+} */
+.kodawari_title_img img{
+	width: 330px;
+	height: 200px;
+	position: absolute;
+	top: -100px;
+	right: 530px;
+	z-index: 3;
+}
+.kodawari_img{
+	display: flex;
+    justify-content: center; /* 水平方向の中央配置 */
+	margin-top: 100px;
+	position: relative;
+}
+.kodawari_img img{
+	width: 500px;
+	display: inline-block;
+	position: absolute;
+	top: -230px;
+	right: -160px;
+	opacity: 95%;
+	z-index: 2;
+}
+.kodawari_right{
+	width: 850px;
+	height: 600px;
+	/* background-color: #b37d8f; */
+	/* background: linear-gradient(to bottom, rgba(179, 125, 143, 0.7) 30%, rgba(255, 125, 143, 0.7) 100%); */
+	position: relative;
+	z-index: 1;
+}
+.shodo {
+    font-family: 'Sawarabi Mincho', 'Kaushan Script', serif; /* 和風フォント */
+    font-size: 1.5em; /* フォントサイズを大きく */
+    font-weight: bold; /* 太字に */
+}
+.kodawari_p{
+	font-size: 18px;
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	right: -60px;
+	transform: translate(-50%, -50%);
+	color: #331907;
+}
+.kodawari_p p{
+	font-weight: bold;
+	font-family: serif;
+	letter-spacing: 2px;
+	line-height: 3;
+}
+
+/* ========================================
+    商品
+========================================= */
+.product{
+	position: relative;
+}
+.product_title_img{
+	position: relative;
+}
+.product_title_img img{
+	width: 310px;
+	height: 200px;
+	position: absolute;
+	top: 150px;
+	right: 500px;
+	z-index: 3;
+}
+.product_all{
+	display: flex;
+	flex-wrap: wrap; /* 折り返しを許可 */
+	justify-content: space-between;
+	width: 80%;
+	position: absolute;
+	top: 700px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.product_all > .product_ {
+	flex-basis: calc(33.333% - 20px); /* 3つ並べる & 間隔確保 */
+	margin-bottom: 30px;/*下に余白*/
+  }
+.product_img{
+	padding-left: 30px;
+}
+.product_img img{
+	width: 250px;
+	height: 200px;
+}
+.product_name{
+	color: #331907;
+	font-family: serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 20px;
+	padding-right: 30px;
+}
+.product_price{
+	color: #331907;
+	font-family: serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 30px;
+}
+
+
+/* ========================================
+    ご購入はこちら
+========================================= */
+.buy{
+	position: relative;
+}
+.buy_title_img{
+	position: relative;
+}
+.buy_btn {
+	display: block;
+	width: 500px; /* 画像の幅に合わせて調整 */
+	height: 300px; /* 画像の高さに合わせて調整 */
+	background-image: url("images/konyu.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 1050px;
+	right: 380px;
+	z-index: 3;
+}
+.buy_btn:hover {
+	background-image: url("images/konyu_hover.png");
+}
+.buy p{
+	position: absolute;
+	top: 1300px;
+	right: 38%;
+	font-size: 18px;
+	font-family: serif;
+	font-weight: bold;
+	color: #331907;
+}
+/* ========================================
+    footer
+========================================= */
+footer{
+	width: 100%;
+	height: 300px;
+	position: relative;
+}
+.footer_content{
+	content: '';
+	position: absolute;
+	top: 1500px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-image: url(images/pinkbrown_background.jpg);
+	background-size: 100% 100%;
+}
+.footer_left img{
+	width: 350px;
+	height: 250px;
+}
+.footer_middle{
+	display: flex;
+	margin-right: 50px;
+}
+.footer_middle a{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: serif;
+	text-decoration: none;
+	padding-left: 50px;
+}
+.footer_right a{
+	color: #fff;
+	background-color: #331907;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: serif;
+	text-decoration: none;
+	padding: 20px 40px;
+}
+/* ========================================
+    アニメーション
+========================================= */
+
+/*******指定したクラスをスクロールでフェードインする*/
+.header_left,
+.kodawari,
+.product,
+.buy,
+.header_right {
+  opacity: 0; /* 初期状態で透明 */
+  transform: translateY(50px); /* 下に少しずらす */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* アニメーションを設定 */
+}
+/* スクロールで表示時に適用 */
+.header_left.show,
+.kodawari.show,
+.product.show,
+.buy.show,
+.header_right.show {
+  opacity: 1;
+  transform: translateY(0);
+}

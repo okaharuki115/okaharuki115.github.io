@@ -1,0 +1,250 @@
+@charset "utf-8";/*文字化け防止*/
+/* ========================================
+    リセットcss(デフォルトで読み込まれるCSSを無効にする)
+    （この記述はネット等で調べたら出てくる）
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================
+    リセットcss終了
+========================================= */
+
+body{
+    background: url(images/bg.png);/*画像を敷き詰めて表示するのでno-repeatはいらない*/
+    border-top: 5px solid #345c39;/*緑の一番上の境界線*/
+    font-family: "メイリオ",Meiryo;
+}
+div#wrapper{
+    width: 960px;
+    margin: 0 auto;/*左右真ん中にする*/
+}
+
+.box_shadow{
+    box-shadow: 0 2px 7px rgba(83, 78, 61, 0.3);
+}
+/* ========================================
+   ヘッダー
+========================================= */
+header{
+    width: 960px;
+    height: 49px;/*元々89px→上下20pxのpaddingを含めて89pxにしたいので49pxに変更*/
+    padding: 20px 0;
+    position: relative;/*nav_tel画像をheaderの右上に配置するための基準の記述*/
+}
+header h1{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: serif;
+    letter-spacing: 1px;
+    color: #666666;
+    background: url(images/leaf_logo.png) no-repeat;/*ロゴをh1の背景とする(その方が文字等の調節が行いやすいことがある)(no-repeatで繰り返し表示をなくす)*/
+    background-size: 50px;
+    padding-left: 51px;/*marginだとロゴを含めたBOXごと移動してしまう、51pxはサイトの左端からh1までの距離*/
+    line-height: 1;/*文字のサイズの行間指定→1行目と２行目がピッタリくっつくような表示になる*/
+    height: 49px;/*ロゴの高さと同じ(ロゴの上部分が切れないように)*/
+    float: left;
+}
+
+header nav{
+    float: right;
+    margin-top: 36px;/*TELからホームまでの距離*/
+}
+
+header p#nav_tel{
+    position: absolute;
+    top: 0;
+    right: 0;/*headerを親要素にして、上から0右から0の所に配置*/
+}
+
+
+header h1 span{
+    font-size: 33px;
+    font-family: serif;
+    color: #331907;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;/*spanタグをインライン要素からブロックタイプ要素に変更する(marginはブロックタイプにしか適用されない)*/
+    margin-top: 10px;
+}
+
+header nav ul li{
+    float: left;/*「ホーム」～「ご予約」を横並びにする*/
+    margin-left: 50px;
+}
+
+header nav ul li:hover{
+    background: url(images/navbar.png) no-repeat center bottom;/*緑の逆三角形を真ん中の下に配置する*/
+    height: 36px;/*緑の逆三角形をunderline上に表示させるための調整の高さ*/
+    display: inline-block;/*横幅を文字の横幅に指定したい(inline)＋背景画像を使用したい(block)*/
+}
+
+header nav ul li a{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: serif;
+    letter-spacing: 2px;
+    color: #666666;
+    text-decoration: none;
+    height: 26px;/*「ホーム」の文字のてっぺんからunderlineまで*/
+    display: inline-block;/*aタグのheightを適用させるために、インライン要素→ブロックタイプ要素にする*/
+}
+
+/*listの上にマウスが重なったときのaタグに*/
+header nav ul li:hover a{
+    color: #345539;
+    border-bottom: 4px solid #345539;/*マウスが上に来たときに下線を引くようにする*/
+}
+
+/* ========================================
+    メイン画像
+========================================= */
+div#mainimage{
+    width: 950px;
+    height: 290px;
+    margin: 40px 0;
+    border: 2px solid #fff;
+}
+
+/* ========================================
+    コンテンツ（レフト）
+========================================= */
+div#left{
+    width: 555px;/*元々575px→padding:10pxを指定した分横幅が増えたので、20px引いた555pxに設定(heightも同様)*/
+    height: 178px;/*とりあえず具体的な数字を入れておいて、そのあとに画像に合わせるためにautoに変更する*/
+    background-color: #fff;
+    float: left;/*leftとrightを横並びにするための記述、左詰めなのでfloat:left*/
+    margin-right: 20px;
+    padding: 10px;
+}
+
+div#left h2{
+    font-size: 17px;
+    font-weight: bold;
+    font-family: serif;
+    letter-spacing: 2px;
+    color: #345c39;
+    border-left: 5px solid #345c39;
+    padding-left: 10px;
+}
+
+div#left ul{
+    overflow: scroll;/*overflow：はみ出たものをどうするか。widthとheightとセットで記述する*/
+    width: 555px;
+    height: 145px;
+}
+
+div#left ul li span{
+    font-size: 12px;
+    font-weight: normal;
+    font-family: serif;
+    color: #927e7a;
+    margin-right: 15px;
+}
+
+div#left ul li{
+    font-size: 13px;
+    font-weight: normal;
+    color: #666666; 
+    border-bottom: 1px dotted #d0d0d0;
+    line-height: 32px;
+}
+/* ========================================
+    コンテンツ（ライト）
+========================================= */
+div#right{
+    width: 365px;
+    height: 198px;
+    float: left;/*leftとrightを横並びにするための記述、左詰めなのでfloat:left*/
+}
+
+div#right ul li{
+    line-height: 60px;/*line-heightで行間を指定すると、その中の文字はその上下の真ん中に配置される*/
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 2px solid #345539;
+}
+
+div#right ul li a{
+    width: 225px;
+    height: 60px;
+    display: block;/*横幅と高さを適用できるように、インライン要素→ブロックタイプに変更*/
+    font-size: 17px;
+    font-weight: bold;
+    font-family: serif;
+    letter-spacing: 2px;
+    color: #345539;
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
+    /* padding-left: 140px; */
+}
+
+div#right ul li a#contact{
+    /* background: url(images/contact2.jpg); */
+    /* background-color: #345539; */
+}
+
+div#right ul li a#blog{
+    /* background: url(images/blog.jpg); */
+    /* background-color: #345539; */
+}
+
+div.clear{
+    clear: both;/*floatを解除するためのdovタグに対するcss*/
+}
+
+/* ========================================
+    フッタ―
+========================================= */
+footer{
+    width: 100%;
+    height: 58px;
+    background-color: #345c39;
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: serif;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;/*文字を左右ど真ん中に配置*/
+    line-height: 58px;/*文字を上下ど真ん中に配置*/
+}

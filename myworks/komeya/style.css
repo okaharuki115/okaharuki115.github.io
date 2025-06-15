@@ -1,0 +1,539 @@
+@charset "utf-8";/*文字化け防止*/
+/* ========================================
+    リセットcss(デフォルトで読み込まれるCSSを無効にする)
+    （この記述はネット等で調べたら出てくる）
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================
+    リセットcss終了
+========================================= */
+html {
+	scroll-behavior: smooth;
+  }
+/* ========================================
+    header
+========================================= */
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;/*display:flex内の記述を上下中央に配置する*/
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.header_left img{
+	width: 80px;
+	height: 80px;
+}
+
+nav a{
+	text-decoration: none;
+	color:#000;
+	font-size: 16px;
+	padding-left: 70px;
+	letter-spacing: 1px;
+}
+nav a:hover{
+	color: brown;
+}
+/* ========================================
+   mainimage
+========================================= */
+.mainimage{
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.mainimage img{
+	width: 80%;
+	height: 650px;
+	object-fit: cover; /* 画像の比率を維持したまま調整 */
+}
+
+.mainimage_sentence p{
+	font-size: 22px;
+	color: #ffffff;
+	border-top: 1.5px solid #ffffff;
+	border-bottom: 1.5px solid #ffffff;
+	line-height: 3;
+	letter-spacing: 2px;
+	position: absolute;
+	bottom: 165px;
+	right: 15%;
+	width: 380px;
+	text-align: center;
+}
+/* ========================================
+   concept
+========================================= */
+.concept{
+	position: relative;
+}
+
+.title_h2{
+	font-size: 26px;
+	text-align: center;
+	letter-spacing: 10px;
+	margin-top: 150px;
+	margin-bottom: 200px;
+}
+
+.concept_strait{
+	content: '';
+	background-color: #000;
+	width: 1.3px;
+	height: 150px;
+	/*下記のように位置を定めないと線は表示されない*/
+	position: absolute;
+	top: 60px;
+	left: 50%;
+}
+
+.concept_sentence h3{
+	text-align: center;
+	letter-spacing: 4px;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.concept_sentence p{
+	text-align: center;
+	letter-spacing: 3px;
+	line-height: 3;
+	margin-bottom: 50px;
+}
+.concept_imgs{
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin: 0 auto;
+}
+.concept_img{
+	width: 230px;  /* 任意のサイズ */
+    height: 230px; /* 正方形にする */
+    border-radius: 50%; /* 角を丸くして円形にする */
+    object-fit: cover; /* 画像が円の中に収まるように調整 */
+}
+/* ========================================
+   menu
+========================================= */
+.menu{
+	position: relative;
+}
+/* .menu_background{
+	z-index: 10;
+	contain: ''; 
+	background-color: beige;
+	opacity: 0.5;
+	width: 80%;
+	height: 60rem;
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+} */
+.menu_contain{
+	z-index: 11;
+	position: relative; /* これを追加することで、beigeのbackgroundの上に文字を表示できる */
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	margin: 0 auto;
+	padding: 40px;
+	flex-wrap: wrap;
+	background-color:  rgba(242, 243, 227, 0.5); /* 50% の透明度 */
+}
+.concept_strait3{
+	content: '';
+	background-color: #000;
+	width: 1.3px;
+	height: 150px;
+	/*下記のように位置を定めないと線は表示されない*/
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	
+}
+/* .menu_left, .menu_right{
+	width: 400px;
+} */
+
+.menu_contain h3{
+	font-size: 18px;
+	letter-spacing: 4px;
+	line-height: 3;
+	border-bottom: 2px solid #000;
+	margin-bottom: 15px;
+	width: 400px;
+}
+.menu_gu{
+	padding: 25px;
+}
+.menu_dots{
+	width: 100%;
+    content: "";
+    height: 2px;
+	background-image: url(images/dots.png);
+	background-repeat: repeat-x;
+	background-position: center; /*上下中央に配置 */
+	line-height: 2;
+}
+.menu_gu dl{
+	display: flex;
+	align-items: center;
+	padding-bottom: 25px;
+}
+.menu_gu dl dt{
+	margin-right: 12px;
+}
+.menu_gu_name{
+	font-size: 18px;
+	white-space: nowrap; /* 改行を防ぐ */
+}
+.menu_gu_sentence{
+	font-size: 14px;
+	color: #666666;
+	padding-bottom: 10px;
+	white-space: nowrap; /* 改行を防ぐ */
+}
+.menu_price{
+	white-space: nowrap; /* 改行を防ぐ */
+	margin-left: 12px;
+}
+/* ========================================
+    access
+========================================= */
+.access{
+	position: relative;
+}
+/* .access_both{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 50px 110px;
+} */
+.access_both {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 50px 10px;
+    flex-direction: row; /* 追加 */
+}
+.concept_strait2{
+	content: '';
+	background-color: #000;
+	width: 1.3px;
+	height: 150px;
+	/*下記のように位置を定めないと線は表示されない*/
+	position: absolute;
+	top: 60px;
+	left: 50%;
+}
+.access_right img{
+	width: 300px;
+	height: 150px;
+}
+.access_right dl{
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #666666;
+	line-height: 2.5;
+}
+.access_right dl dt{
+	font-size: 20px;
+	padding-right: 50px;
+	letter-spacing: 2px;
+	width: 150px;/*dtのwidthを指定することでddの左端が揃う*/
+}
+.access_right dl dd{
+	color: #666666;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+
+/* ========================================
+    footer
+========================================= */
+footer{
+	background-color: darkgray;
+	padding-bottom: 50px;
+	margin-top: 100px;
+	position: relative;
+}
+.footer_nav{
+	display: flex;
+	justify-content: space-around;
+	width: 60%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin: 0 auto;
+	background-color: darkgray;
+}
+.footer_nav a{
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+	/* padding-left: 50px; */
+	display: block;
+	letter-spacing: 2px;
+}
+.footer_nav a:hover{
+	color: brown;
+}
+.footer_logo{
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	position: relative;
+}
+.footer_logo img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+}
+footer p{
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 1px;
+	position: absolute;
+	bottom: 30px;
+	right: 50px;
+}
+
+/* ========================================
+    アニメーション
+========================================= */
+/*******指定したクラスをスクロールでフェードインする*/
+.mainimage,
+.concept,
+.menu,
+.access {
+  opacity: 0; /* 初期状態で透明 */
+  transform: translateY(50px); /* 下に少しずらす */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* アニメーションを設定 */
+}
+
+/* スクロールで表示時に適用 */
+.mainimage.show,
+.concept.show,
+.menu.show,
+.access.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/**********************************
+        レスポンシブデザイン ~768px
+**********************************/
+@media screen and (max-width: 768px) {
+
+
+/******* header(~768px)******/
+.header_left img{
+	width: 60px;
+	height: 60px;
+}
+nav a{
+	font-size: 14px;
+	padding-left: 60px;
+}
+/****mainimage(~768px)******/
+.mainimage img{
+	width: 90%;
+	height: 600px;
+}
+
+.mainimage_sentence p{
+	font-size: 20px;
+	color: #ffffff;
+	position: absolute;
+	bottom: 155px;
+	right: 10%;
+}
+/****concept(~768px)******/
+.title_h2{
+	margin-top: 100px;
+	margin-bottom: 200px;
+}
+.concept_sentence{
+	width: 90%;
+	margin: 0 auto;
+}
+.concept_sentence p{
+	letter-spacing: 2px;
+}
+.concept_imgs{
+	flex-direction: column;/*縦並び*/
+    align-items: center;/*左右中央に配置*/
+}
+.concept_img{
+	width: 300px;  /* 任意のサイズ */
+    height: 300px; /* 正方形にする */
+	padding: 1rem;
+}
+/****menu(~768px)******/
+
+/* ▼ menuの左右を縦に並べる */
+    .menu_contain {
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+		width: 90%; /* 幅も見直すとより自然 */
+    }
+    .menu_left,
+    .menu_right {
+        width: 100%;
+        max-width: 500px;
+    }
+
+	.menu_background {
+        height: 110rem; /* ✅ ここが目的のスタイル */
+		position: absolute;
+		top: 300px;
+		left: 50%;
+		z-index: 10;
+		width: 80%;
+		height: 60rem;
+		position: absolute;
+		top: 140px;
+		left: 50%;
+		transform: translate(-50%, 0%);
+	}
+/****access(~768px)******/
+    .access_both {
+        flex-direction: column;
+        align-items: center;
+    }
+	.access_left,
+    .access_right {
+        max-width: 100%;
+    }
+}
+
+/**********************************
+        レスポンシブデザイン ~600px
+**********************************/
+@media screen and (max-width: 600px) {
+
+
+/******* header(~600px)******/
+.header_left img{
+	width: 40px;
+	height: 40px;
+}
+nav a{
+	font-size: 12px;
+	padding-left: 30px;
+}
+/****mainimage(~600px)******/
+.mainimage img{
+	width: 95%;
+	height: 400px;
+}
+.mainimage_sentence p{
+	font-size: 14px;
+	position: absolute;
+	bottom: 135px;
+	right: 5%;
+}
+/****concept(~600px)******/
+.title_h2{
+	font-size: 20px;
+	margin-top: 90px;
+	margin-bottom: 200px;
+}
+.concept_sentence p{
+	letter-spacing: 1px;
+}
+/****menu(~600px)******/
+	.menu_contain h3{
+		letter-spacing: 3px;
+		width: 300px;
+	}
+    .menu_left,
+    .menu_right {
+        width: 100%;
+        max-width: 340px;
+    }
+	.menu_gu_sentence{
+		font-size: 10px;
+	}
+/****access(~600px)******/
+    .access_both {
+        flex-direction: column;
+        align-items: center;
+    }
+	.access_left,
+    .access_right {
+        /* max-width: 340px; */
+		margin: 0 auto;
+    }
+	.access_right dl dt{
+		font-size: 16px;
+		padding-right: 30px;
+		width: 120px;/*dtのwidthを指定することでddの左端が揃う*/
+	}
+	.access_right dl dd{
+		font-size: 13px;
+	}
+	.map-frame {
+		width: 100%;       /* 幅を親要素に合わせる */
+		height: 400px;     /* 高さを任意のピクセル数に設定 */
+		border: 0;         /* 枠線をなしに */
+	}
+/*****footer(~600px)****/
+	.footer_nav{
+		width: 90%;
+	}
+}
+
+

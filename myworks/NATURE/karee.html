@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!--メディアクエリ反映の為の記述-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curry_practice</title>
+    <!--↓Iconify読込-->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+</head>
+<body>
+    <header>
+        <!-- ハンバーガーメニューのボタン -->
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!--ナビゲーション-->
+        <nav>
+            <a href="#">PRODUCT</a>
+            <a href="#">MENU</a>
+            <a href="#">NEWS</a>
+            <a href="#">CONTACT</a>
+        </nav>
+
+        <!--右上のアイコン２個-->
+        <div id="icons">
+            <a href="#"><!--カートのアイコン-->
+                <span class="iconify" data-icon="mdi:cart" data-inline="false"></span>
+            </a>
+            <a href="#"><!--インスタのアイコン-->
+                <span class="iconify" data-icon="mdi:instagram" data-inline="false"></span>
+            </a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="mainimage">
+            <!--メイン画像-->
+            <img src="image/bouquet2.jpg" alt="メインの花束画像">
+            <!--メインの背景画像-->
+            <div class="main_background">
+                <img src="image/pinkpaper2.jpg" alt="メインの背景画像">
+            </div>
+            <!--NOILLYロゴ-->
+            <div class="noilly">
+                <img src="image/nature.png" alt="NATURE">
+            </div>
+        </div>
+        
+
+        <!--what's noilly-->
+        <div class="whats_contain">
+            <div class="whats_wrap">
+                <span class="whats">Nature Flower Nature Flower Nature Flower</span>
+                <span class="whats">Nature Flower Nature Flower Nature Flower</span>
+            </div>
+        </div>
+
+        <!----1---->
+        <div class="one">
+            <div class="left_01">
+                <!--[01]-->
+                <div id="num_01">
+                    <span>[01]</span>
+                </div>
+
+                <!--NOILLYとは-->
+                <h2 id="title_01">NATUREの特徴</h2>
+                
+                <!--NOILLYとはの下の文章-->
+                <div id="sentence_01">
+                    <p>四季折々の美しさを感じられる<br>
+                        旬の花を毎朝市場で仕入れて<br>
+                        新鮮な状態でお届けします。<br><br>
+                        
+                        誕生日や記念日など大切な瞬間に<br>
+                        お客様の想いを花で表現する<br>
+                        世界に一つの花束をお作りします。<br><br>
+                        
+                        ご自宅や店舗などの空間に合わせ<br>
+                        季節やテーマに沿ったアレンジで<br>
+                        花のある暮らしをご提案します。</p>
+                </div>
+            </div>
+            <div class="right_01">
+                <img src="image/bouquet3.avif" alt="花束">
+            </div>
+        </div>
+
+        <!----2---->
+        <div id="two">
+            <!--[2]の左側-->
+            <div class="two_left">
+                <img src="image/bouquet4.avif" alt="花束">
+                <span class="vertical-text">Bouquet</span>
+            </div>
+            <!--[2]の右側-->
+            <div class="two_right">
+                <div class="two_right_sentence">
+                    <h2>NATUREで創りあげる<br>心を込めた花束</h2>
+                    <p>
+                        言葉にできない気持ちをやさしく届ける花束だから<br>
+                        一つひとつ心を込めて丁寧に束ねます。<br><br>
+                        
+                        誕生日、送別、記念日などシーンに合わせた<br>
+                        色合いや花の種類をご提案します。<br><br>
+            
+                        仕入れから制作まですべて鮮度を大切に<br>
+                        心を込めて最高の状態でお渡しします。<br><br>
+            
+                        （当社調べ）
+                    </p>
+                </div>
+                <span class="num_02">[02]</span>
+            </div>
+        </div>
+
+        <!----3---->
+        <div id="three">
+            <!--Holiday-->
+            <div>
+                <span class="white_word">anniversary</span>
+            </div>
+            <div class="three_main">
+                <div id="three_left">
+                    <div id="num_03">[03]</div> 
+                    <h2>いつもの生活に<br>花をプラス</h2>
+                    <div id="three_left_sentence">
+                        花のある暮らしは、<br>
+                        心にそっと彩りを添えてくれます。<br>
+                        忙しい毎日の中でも、<br>
+                        ふと目に入る一輪の花が<br>
+                        気持ちをやわらげ、深呼吸をくれる。<br>
+                        花とともに過ごす日々は、<br>
+                        あなたの暮らしを、もっと豊かにします。
+                    </div>
+                    <div id="three_holiday_sentence">休日の過ごし方</div>
+                </div>
+                <div id="three_right">
+                    <img src="image/flower_illust.png" alt="休日×ゼロ脂肪">
+                </div>
+            </div>
+        </div>
+
+        <!--Nonoil-->
+        <!-- <div>
+            <span class="white_word">Nonoil</span>
+        </div> -->
+
+        <!------PRODUCT------->
+        <!--タイトル-->
+        <div class="product_title">
+            <h1>PRODUCT</h1>
+            <span>NATUREで贈る花</span>
+        </div>
+
+        <div class="currysets">
+            <!--アレンジフラワー-->
+            <div id="curry_otoku">
+                <div class="curry_title">Arrange Flowers</div>
+                <div class="curry_img">
+                    <img src="image/flower_arrangement.avif" alt="フラワーアレンジメント">
+                </div>
+                <div class="curry_details">
+                    <div class="curry_price"><span>¥5,000</span>(税込)</div>
+                    <div class="curry_explain"><span>季節のお花をしようしたフラワーアレンジメントを行います。
+                        ※色味等こだわりがありましたらご相談ください。</span>
+                    </div>
+                    <div class="curry_button">
+                        <span class="more">View more</span>
+                        <span class="sold">Sold out</span>
+                    </div>
+                </div>
+            </div>
+            <!--Wedding-->
+            <div id="curry_wafu">
+                <div class="curry_title">Wedding</div>
+                <div class="curry_img">
+                    <img src="image/wedding_bouque.avif" alt="wedding">
+                </div>
+                <div class="curry_details">
+                    <div class="curry_price"><span>¥50,000</span>(税込)</div>
+                    <div class="curry_explain">完全オーダーメイドで<br>
+                        ウェディングブーケをお作りいたします。<br>
+                        ウェディングフォトでの使用も可能です。<br>
+                    </div>
+                    <!-- <div class="kcal">108kcal/一包</div> -->
+                    <div class="curry_button">
+                        <span class="more">View more</span>
+                        <span class="cart">
+                            <span class="iconify" data-icon="mdi:cart" data-inline="false"></span>
+                            Cart
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--propose-->
+            <div id="curry_kinoko">
+                <div class="curry_title">propose</div>
+                <div class="curry_img">
+                    <img src="image/rose2.jpg" alt="propose">
+                </div>
+                <div class="curry_details">
+                    <div class="curry_price"><span>¥100,000</span>(税込)</div>
+                    <div class="curry_explain">一生に一度の大切な瞬間を彩る
+                        プロポーズブーケを心を込めてお作りいたします。
+                        
+                    </div>
+                    <div class="curry_button">
+                        <span class="more">View more</span>
+                        <span class="sold">Sold out</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------CONTACT US------->
+        <div class="contactus">
+            <span>ご注文や取り扱い店舗についてはお問い合わせください。</span>
+            <div class="contactus_main">CONTACT US +</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="small_noilly">
+                <img src="image/nature.png" alt="noilly">
+            </div>
+            <div class="footer_nav">
+                <nav class="footer_nav1">
+                    <a href="#">TOP</a>
+                    <a href="#">PRODUCT</a>
+                    <a href="#">MENU</a>
+                    <a href="#">NEWS</a>
+                    <a href="#">CONTACT</a>
+                    <a href="#">
+                        <span class="iconify" data-icon="mdi:instagram" data-inline="false"></span>
+                    </a>
+                </nav>
+                <nav class="footer_nav2">
+                    <a href="#">ご利用ガイド</a>
+                    <a href="#">運営会社情報</a>
+                    <a href="#">特定商取引法に基づく表記</a>
+                    <a href="#">利用規約</a>
+                    <a href="#">個人情報の取り扱いについて</a>
+                </nav>
+            </div>
+            <div class="pagetop">
+                <span>Page top</span>
+            </div>
+        </div>
+        <!--@Noilly-->
+        <div class="a_noilly">@NATURE</div>
+    </footer>
+
+<script src="curry.js"></script> <!-- JavaScriptの読み込み -->
+</body>
+</html>

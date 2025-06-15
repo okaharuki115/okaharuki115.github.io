@@ -1,0 +1,259 @@
+@charset "utf-8";/*文字化け防止*/
+/* ========================================
+    リセットcss(デフォルトで読み込まれるCSSを無効にする)
+    （この記述はネット等で調べたら出てくる）
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================
+    リセットcss終了
+========================================= */
+body{
+	background-image: url("images/concrete.webp");
+	background-repeat: repeat;
+	background-size: auto;
+}
+header{
+	background-image: url(images/marble_background.jpg);
+	width: 100%;
+	height: 45rem;
+	background-size: cover;        /* 画像を要素全体にフィットさせる */
+  	background-position: center;   /* 画像の中央を表示 */
+  	background-repeat: no-repeat;  /* 画像を繰り返さない */
+}
+.header_title{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.header_maintitle{
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Portfolioの文字を上から始めるようにする */
+  	margin: 0; /* 念のためのマージンリセット */
+}
+.portfolio{
+	/* height: 33%; */
+	font-size: 15.5rem;
+	font-weight: bold;
+	letter-spacing: 5px;
+	color: #e6e6e6;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	line-height: 0.85; /* 行間を最小限に詰める */
+	margin: 0;
+}
+.header_subtitle{
+	display: flex;
+    flex-direction: column;
+    justify-content: center; /* 縦方向中央寄せ */
+	height: 100%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	letter-spacing: 1rem;
+	padding-right: 8rem;
+}
+
+/************************************
+        Works 制作物
+************************************/
+.works{
+	margin-top: 5rem;
+}
+/*works タイトル*/
+.works_maintitle{
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 1;
+	letter-spacing: 5px;
+}
+.works_subtitle{
+	text-align: center;
+	font-size: 1rem;
+	letter-spacing: 3px;
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+/*works 制作物たち*/
+.myworks{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;/* 横幅オーバー時に折り返す */
+}
+.myworks_contain{
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0;
+}
+.myworks_contain img{
+	width: 29rem;
+	height: 15rem;
+}
+.myworks_contain span{
+	text-align: center;
+	padding: 20px 0;
+	font-size: 18px;
+}
+.myworks_contain a{
+	width: 30%;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+	padding: 8px 15px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 3rem; /* ← 角を丸める */
+	border: 1px solid #666666;
+	box-shadow: 2px 2px 0px 0px rgba(102, 102, 102);
+	letter-spacing: 1px;
+}
+/************************************
+        レスポンシブデザイン　~768px
+************************************/
+@media screen and (max-width: 768px) {
+
+header{
+	background-image: url(images/marble_background.jpg);
+	width: 100%;
+	height: 30rem;
+}
+/* .header_title{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+} */
+.header_maintitle{
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Portfolioの文字を上から始めるようにする */
+  	margin: 0; /* 念のためのマージンリセット */
+}
+.portfolio{
+	font-size: 10.5rem;
+	letter-spacing: 3px;
+	line-height: 0.85; /* 行間を最小限に詰める */
+	margin: 0;
+}
+.header_subtitle{
+	font-size: 1rem;
+	letter-spacing: 0.5rem;
+	padding-right: 3rem;
+}
+
+/************************************
+        Works 制作物
+************************************/
+
+/*works 制作物たち*/
+
+.myworks_contain{
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0;
+}
+.myworks_contain img{
+	width: 29rem;
+	height: 15rem;
+}
+.myworks_contain span{
+	text-align: center;
+	padding: 20px 0;
+	font-size: 18px;
+}
+.myworks_contain a{
+	width: 30%;
+	text-align: center;
+	margin: 0 auto;
+	text-decoration: none;
+	padding: 8px 15px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 3rem; /* ← 角を丸める */
+	border: 1px solid #666666;
+	box-shadow: 2px 2px 0px 0px rgba(102, 102, 102);
+	letter-spacing: 1px;
+}
+}
+
+/************************************
+        レスポンシブデザイン　~600px
+************************************/
+@media screen and (max-width: 600px) {
+  header{
+	background-image: url(images/marble_background.jpg);
+	width: 100%;
+	height: 23rem;
+}
+
+.header_maintitle{
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Portfolioの文字を上から始めるようにする */
+  	margin: 0; /* 念のためのマージンリセット */
+}
+.portfolio{
+	font-size: 8.5rem;
+}
+.header_subtitle{
+	padding-right: 1rem;
+	letter-spacing: 0.2rem;
+}
+
+/************************************
+        Works 制作物
+************************************/
+
+.myworks_contain{
+	margin: 30px 0;
+}
+.myworks_contain img{
+	width: 19rem;
+	height: 10rem;
+}
+.myworks_contain span{
+	text-align: center;
+	padding: 20px 0;
+	font-size: 18px;
+}
+}
