@@ -94,6 +94,12 @@ header{
 	letter-spacing: 1rem;
 	padding-right: 8rem;
 }
+/************************************
+        About わたしについて
+************************************/
+.about{
+	margin-top: 5rem;
+}
 
 /************************************
         Works 制作物
@@ -126,7 +132,11 @@ header{
 	flex-direction: column;
 	margin: 30px 0;
 }
-.myworks_contain img{
+/* .myworks_contain img{
+	width: 29rem;
+	height: 15rem;
+} */
+.web_img{
 	width: 29rem;
 	height: 15rem;
 }
@@ -147,6 +157,10 @@ header{
 	border: 1px solid #666666;
 	box-shadow: 2px 2px 0px 0px rgba(102, 102, 102);
 	letter-spacing: 1px;
+}
+.Graphic_img{
+	width: 18rem;
+	height: 26rem;
 }
 /************************************
         レスポンシブデザイン　~768px
@@ -192,7 +206,7 @@ header{
 	flex-direction: column;
 	margin: 30px 0;
 }
-.myworks_contain img{
+.web_img{
 	width: 29rem;
 	height: 15rem;
 }
@@ -247,7 +261,7 @@ header{
 .myworks_contain{
 	margin: 30px 0;
 }
-.myworks_contain img{
+.web_img{
 	width: 19rem;
 	height: 10rem;
 }
