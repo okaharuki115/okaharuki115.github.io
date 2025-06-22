@@ -159,6 +159,7 @@ header{
 	letter-spacing: 1px;
 }
 .Graphic_img{
+	margin: 0 auto;
 	width: 18rem;
 	height: 26rem;
 }
