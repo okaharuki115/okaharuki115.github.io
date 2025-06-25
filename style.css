@@ -95,10 +95,18 @@ header{
 	padding-right: 8rem;
 }
 /************************************
-        About わたしについて
+        Greetings ごあいさつ
 ************************************/
 .about{
 	margin-top: 5rem;
+}
+.greeting_contents{
+	width: 80%;
+	margin: 0 auto;
+	font-size: 16px;
+	letter-spacing: 3px;
+	line-height: 3;
+	text-align: center;
 }
 
 /************************************
@@ -197,6 +205,16 @@ header{
 }
 
 /************************************
+        Greetings ごあいさつ
+************************************/
+.greeting_contents{
+	width: 85%;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 2.5;
+}
+
+/************************************
         Works 制作物
 ************************************/
 
@@ -253,6 +271,16 @@ header{
 .header_subtitle{
 	padding-right: 1rem;
 	letter-spacing: 0.2rem;
+}
+
+/************************************
+        Greetings ごあいさつ
+************************************/
+.greeting_contents{
+	width: 90%;
+	font-size: 13px;
+	letter-spacing: 2px;
+	line-height: 2.5;
 }
 
 /************************************
