@@ -1,0 +1,375 @@
+@charset "utf-8";/*文字化け防止*/
+/* ========================================
+    リセットcss(デフォルトで読み込まれるCSSを無効にする)
+    （この記述はネット等で調べたら出てくる）
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================
+    リセットcss終了
+========================================= */
+body{
+	background-image: url("../images/concrete.webp");
+	background-repeat: repeat;
+	background-size: auto;
+}
+header{
+	height: 5rem;
+}
+.works_maintitle{
+	text-align: left;
+	font-size: 3rem;
+	font-weight: 1;
+	letter-spacing: 5px;
+	margin-left: 10rem;
+}
+/*画像(サイトのとき)*/
+.more_image{
+	display: flex;
+    justify-content: center; 
+}
+.more_image img{
+	width: 60rem;
+	height: auto;
+	margin-top: 5rem;
+	border: 0.5px solid #000;
+}
+/*画像(フライヤーのとき)*/
+.more_image_flyer{
+	display: flex;
+    justify-content: center; 
+}
+.more_image_flyer img{
+	width: 40rem;
+	height: auto;
+	margin-top: 3rem;
+	border: 0.5px solid #000;
+}
+/*説明*/
+.more_content_title{
+	margin-left: 13rem;
+	margin-top: 3rem;
+	font-size: 20px;
+	font-weight: bold;
+	color: #4d4d4d;
+	letter-spacing: 3px;
+}
+.more_content_explain{
+	margin-left: 10rem;
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+.more_content_explain dl{
+	display: flex;
+	margin-top: 1.5rem;
+}
+.more_content_explain dl dt{
+	width: 10rem;
+	padding: 10px 20px;
+	text-align: center;
+	background-color: #fff;
+	font-weight: bold;
+	color: #4d4d4d;
+	border-radius: 3rem; /* ← 角を丸める */
+	border: 1px solid #666666;
+	box-shadow: 1px 1px 0px 0px rgba(102, 102, 102);
+}
+.more_content_explain dl dd{
+	padding-left: 2rem;
+	display: flex;
+  	align-items: center; /* 上下中央 */
+}
+.color_circles{
+	display: flex;
+	margin-left: 14rem;
+	margin-top: 1rem;
+}
+/***************カラー（komeya）**************/
+.circle_komrya1{
+	width: 50px;        
+	height: 50px;       
+	background-color: #fff; 
+	border-radius: 50%;  /* 角を丸くして円にする */
+	margin-right: 1rem;
+}
+.circle_komrya2{
+	width: 50px;        
+	height: 50px;       
+	background-color: #2e8b57; 
+	border-radius: 50%; 
+	margin-right: 1rem;
+}
+.circle_komrya3{
+	width: 50px;        
+	height: 50px;       
+	background-color: #ffe9cc; 
+	border-radius: 50%;  
+	margin-right: 1rem;
+}
+/***************カラー（meko）**************/
+.circle_meko1{
+	width: 50px;        
+	height: 50px;       
+	background-color: #998367; 
+	border-radius: 50%;  /* 角を丸くして円にする */
+	margin-right: 1rem;
+}
+.circle_meko2{
+	width: 50px;        
+	height: 50px;       
+	background-color: #e6ded1; 
+	border-radius: 50%; 
+	margin-right: 1rem;
+}
+.circle_meko3{
+	width: 50px;        
+	height: 50px;       
+	background-color: #665842; 
+	border-radius: 50%;  
+	margin-right: 1rem;
+}
+/***************カラー（nature）**************/
+.circle_nature1{
+	width: 50px;        
+	height: 50px;       
+	background-color: #fff; 
+	border-radius: 50%;  /* 角を丸くして円にする */
+	margin-right: 1rem;
+}
+.circle_nature2{
+	width: 50px;        
+	height: 50px;       
+	background-color: #cc6688; 
+	border-radius: 50%; 
+	margin-right: 1rem;
+}
+.circle_nature3{
+	width: 50px;        
+	height: 50px;       
+	background-color: #006600; 
+	border-radius: 50%;  
+	margin-right: 1rem;
+}
+/***************カラー（leaf）**************/
+.circle_leaf1{
+	width: 50px;        
+	height: 50px;       
+	background-color: #004d00; 
+	border-radius: 50%;  /* 角を丸くして円にする */
+	margin-right: 1rem;
+}
+.circle_leaf2{
+	width: 50px;        
+	height: 50px;       
+	background-color: #ffedcc; 
+	border-radius: 50%; 
+	margin-right: 1rem;
+}
+.circle_leaf3{
+	width: 50px;        
+	height: 50px;       
+	background-color: #806d55; 
+	border-radius: 50%;  
+	margin-right: 1rem;
+}
+/***************カラー（Piccolo）**************/
+.circle_Piccolo1{
+	width: 50px;        
+	height: 50px;       
+	background-color: #821a00; 
+	border-radius: 50%;  /* 角を丸くして円にする */
+	margin-right: 1rem;
+}
+.circle_Piccolo2{
+	width: 50px;        
+	height: 50px;       
+	background-color: #fff; 
+	border-radius: 50%; 
+	margin-right: 1rem;
+}
+.circle_Piccolo3{
+	width: 50px;        
+	height: 50px;       
+	background-color: #006004; 
+	border-radius: 50%;  
+	margin-right: 1rem;
+}
+/***************カラー（GreenbowL）**************/
+.circle_GreenbowL1{
+	width: 50px;        
+	height: 50px;       
+	background-color: #bae6b5; 
+	border-radius: 50%;  /* 角を丸くして円にする */
+	margin-right: 1rem;
+}
+.circle_GreenbowL2{
+	width: 50px;        
+	height: 50px;       
+	background-color: #72b36b; 
+	border-radius: 50%; 
+	margin-right: 1rem;
+}
+.circle_GreenbowL3{
+	width: 50px;        
+	height: 50px;       
+	background-color: #ad1400; 
+	border-radius: 50%;  
+	margin-right: 1rem;
+}
+/***************カラー（porlor）**************/
+.circle_parlor1{
+	width: 50px;        
+	height: 50px;       
+	background-color: #703b77; 
+	border-radius: 50%;  /* 角を丸くして円にする */
+	margin-right: 1rem;
+}
+.circle_parlor2{
+	width: 50px;        
+	height: 50px;       
+	background-color: #c28fcc; 
+	border-radius: 50%; 
+	margin-right: 1rem;
+}
+.circle_parlor3{
+	width: 50px;        
+	height: 50px;       
+	background-color: #fff; 
+	border-radius: 50%;  
+	margin-right: 1rem;
+}
+
+/************************************
+        レスポンシブデザイン　~768px
+************************************/
+@media screen and (max-width: 768px) {
+
+.works_maintitle{
+	letter-spacing: 4px;
+	margin-left: 6rem;
+}
+/*画像(サイトのとき)*/
+.more_image img{
+	width: 38rem;
+	height: auto;
+}
+/*画像(フライヤーのとき)*/
+.more_image_flyer img{
+	width: 30rem;
+	height: auto;
+}
+/*説明*/
+.more_content_title{
+	margin-left: 6rem;
+	font-size: 18px;
+}
+.more_content_explain{
+	margin-left: 2rem;
+	font-size: 14px;
+}
+
+.more_content_explain dl dt{
+	width: 6rem;
+	padding: 8px 15px;
+	border-radius: 3rem; /* ← 角を丸める */
+}
+.more_content_explain dl dd{
+	padding-left: 1.5rem;
+}
+.color_circles{
+	margin-left: 10rem;
+}
+
+}
+
+/************************************
+        レスポンシブデザイン　~600px
+************************************/
+@media screen and (max-width: 600px) {
+.works_maintitle{
+	font-size: 2rem;
+	letter-spacing: 3px;
+	margin-left: 3rem;
+}
+/*画像(サイトのとき)*/
+.more_image img{
+	width: 20rem;
+	height: auto;
+}
+/*画像(フライヤーのとき)*/
+.more_image_flyer img{
+	width: 20rem;
+	height: auto;
+}
+/*説明*/
+.more_content_title{
+	margin-left: 2rem;
+	font-size: 13px;
+}
+.more_content_explain{
+	margin-left: 1rem;
+	/* margin-top: 2rem;
+	margin-bottom: 5rem; */
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+.more_content_explain dl{
+	flex-direction: column;/*dtとddを縦並びにする*/
+	margin-top: 1.5rem;
+}
+
+.more_content_explain dl dt{
+	width: 6rem;
+	padding: 8px 12px;
+	border-radius: 2rem; /* ← 角を丸める */
+}
+.more_content_explain dl dd{
+	padding-left: 1.5rem;
+	margin-top: 1rem;
+}
+.color_circles{
+	margin-left: 3rem;
+}
+}
